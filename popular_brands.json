@@ -1,0 +1,64 @@
+{
+  "top_fashion": [
+    "Louis Vuitton",
+    "Chanel",
+    "Gucci",
+    "Hermès",
+    "Prada",
+    "Dior",
+    "Balenciaga",
+    "Saint Laurent",
+    "Fendi",
+    "Valentino"
+  ],
+  "premium_fashion": [
+    "Givenchy",
+    "Bottega Veneta",
+    "Burberry",
+    "Versace",
+    "Celine",
+    "Loewe",
+    "Tom Ford",
+    "Alexander McQueen",
+    "Maison Margiela",
+    "Off-White"
+  ],
+  "luxury_shoes": [
+    "Christian Louboutin",
+    "Jimmy Choo",
+    "Manolo Blahnik",
+    "Salvatore Ferragamo",
+    "Gianvito Rossi",
+    "Roger Vivier",
+    "Berluti"
+  ],
+  "jewelry_watches": [
+    "Cartier",
+    "Van Cleef & Arpels",
+    "Bvlgari",
+    "Chopard",
+    "Tiffany & Co.",
+    "Piaget",
+    "Graff",
+    "Patek Philippe",
+    "Audemars Piguet",
+    "Rolex"
+  ],
+  "niche_brands": [
+    "Amiri",
+    "Fear of God",
+    "Issey Miyake",
+    "Yohji Yamamoto",
+    "Comme des Garçons",
+    "Delvaux",
+    "Goyard",
+    "Moynat",
+    "Etro",
+    "Ermenegildo Zegna"
+  ],
+  "custom": [
+    "hahaha",
+    "Adidas",
+    "FendFendinging"
+  ]
+}
