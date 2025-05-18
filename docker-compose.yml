@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  bot:
+    build: .
+    container_name: supplier-bot
+    restart: always
+    volumes:
+      - ./data:/app/data
+      - ./qr_codes:/app/qr_codes
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Tashkent
