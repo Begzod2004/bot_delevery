@@ -17,12 +17,22 @@ from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, FSInputF
 from aiogram.client.session.aiohttp import AiohttpSession
 from datetime import datetime, timedelta
 import json
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv('.env')  # Explicitly specify .env file
 
 # Configuration
-API_TOKEN = '7840291905:AAEm7jpF8FQw9FxV-7EkF7kPVlHIZtyQhIU'
-# Замените на ID вашего аккаунта в Telegram
-ADMIN_IDS = [6547570784, 1835816946]  # Список ID администраторов
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN not found in environment variables")
+
+ADMIN_IDS = [int(id) for id in os.getenv('ADMIN_IDS', '').split(',') if id]
+if not ADMIN_IDS:
+    raise ValueError("ADMIN_IDS not found in environment variables")
+
 logging.basicConfig(level=logging.INFO)
+logging.info(f"Bot token loaded: {BOT_TOKEN[:10]}...")  # Log first 10 chars of token for verification
 
 # Set up data storage
 DB_FILE = 'suppliers.db'
@@ -31,7 +41,7 @@ QR_FOLDER = 'qr_codes'
 BRANDS_FILE = 'popular_brands.json'
 
 # Initialize bot and dispatcher with default session
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 # Bot configuration with increased timeout
